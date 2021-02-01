@@ -7,12 +7,13 @@
 """
 
 
-def capitalize_func(text):
-    def int_func(word: str):
-        return f'{word[0].upper()}{word[1:]}'
-
-    words = text.split()
-    return ' '.join(list(map(lambda word: int_func(word), words)))
+def int_func(word: str):
+    return f'{word[0].upper()}{word[1:]}'
 
 
-print(capitalize_func('тестовЫЙ тЕКСТ для Проверки работы программы'))
+text = input('Введите текст: ')
+words = text.split()
+new_words = []
+for word in words:
+    new_words.append(int_func(word))
+print(' '.join(new_words))
