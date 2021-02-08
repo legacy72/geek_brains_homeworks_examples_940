@@ -5,5 +5,10 @@
 """
 from sys import argv
 
+
+def salary(hours, rate, premium):
+    return f'ЗП составляет: {hours} * {rate} + {premium} = {float(hours) * float(rate) + float(premium)}'
+
+
 _, hours, rate, premium = argv
-print(f'ЗП составляет: {hours} * {rate} + {premium} = {float(hours) * float(rate) + float(premium)}')
+print(salary(hours, rate, premium))
